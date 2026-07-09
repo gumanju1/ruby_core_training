@@ -1,5 +1,10 @@
-def square_each_digit num
-  # Write your code here
+def square_each_digit(num)
+  return "NaN" unless num.is_a?(Numeric)
+
+  digits = num.to_s.chars
+  result = digits.map { |digit| (digit.to_i ** 2).to_s }.join
+
+  result.to_i
 end
 
 describe "#square_each_digit" do
